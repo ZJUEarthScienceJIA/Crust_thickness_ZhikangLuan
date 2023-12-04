@@ -56,17 +56,17 @@ Model 1 uses global arc and orogenic magmatic whole rock geochemistry data barri
  CT_XGB_RF_ET_Final_Model  2.ipynb
 
     Parameters of XGBoost:
-              base_score=0.3, boost_params='gbtree', booster=None,
-              callbacks=None, colsample_bylevel=None, colsample_bynode=None,
-              colsample_bytree=0.5, early_stopping_rounds=None,
-              enable_categorical=False, eval_metric=None, feature_types=None,
-              gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
-              interaction_constraints=None, learning_rate=0.1, max_bin=None,
-              max_cat_threshold=None, max_cat_to_onehot=None,
-              max_delta_step=None, max_depth=5, max_leaves=None,
-              min_child_weight=100, monotone_constraints=None,
-              n_estimators=250, n_jobs=None, num_parallel_tree=None,
-              predictor=None,
+                           base_score=0.3, boost_params='gbtree', booster=None,
+                           callbacks=None, colsample_bylevel=None, colsample_bynode=None,
+                           colsample_bytree=0.5, early_stopping_rounds=None,
+                           enable_categorical=False, eval_metric=None, feature_types=None,
+                           gamma=None, gpu_id=None, grow_policy=None, importance_type=None,
+                           interaction_constraints=None, learning_rate=0.1, max_bin=None,
+                           max_cat_threshold=None, max_cat_to_onehot=None,
+                           max_delta_step=None, max_depth=5, max_leaves=None,
+                           min_child_weight=100, monotone_constraints=None,
+                           n_estimators=250, n_jobs=None, num_parallel_tree=None,
+                           predictor=None,
 
 # Data Predictions
 This part is used to introduce how to apply our models. If you just  want to use our model, you can run the next two files.
@@ -80,5 +80,5 @@ XGBoost model2_ application.ipynb
 Please run the CT_XGB_RF_ET_Final_Model 1.ipynb, CT_XGB_RF_ET_Final_Model 2.ipynb, XGBoost model1.0_ application.ipynb, XGBoost model2.0_ application.ipynb in turn. You can change the filenames and parameters as you need. 
 
 # Contributors
-Zhikang Luan
+Zhikang Luan；
 Contant Email: zinkluan@zju.edu.cn
