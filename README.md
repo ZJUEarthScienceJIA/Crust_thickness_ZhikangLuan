@@ -33,10 +33,12 @@ All training datasets, validation datasets and application datasets are all in t
 
 # Model Training 
 This part is used for introducing the model training and saving. 
+The model training use the major elements （SiO2 TiO2 Al2O3	FeOt CaO MgO MnO K2O Na2O P2O5) and trace elements (Cr Ni Rb Sr Y Zr Nb Ba La Ce Pr Nd Sm Eu Gd Tb Dy Er Yb Lu Hf Th Ln(La/Yb(n)) Sr/Y).
 
 ## Model 1
 Model 1 uses global arc and orogenic magmatic whole rock geochemistry data including Gangdese with XGboost algorithm to build model to calculate the crust thickness (CT).
-CT_XGB_RF_ET_Final_Model 1.ipynb
+
+    CT_XGB_RF_ET_Final_Model 1.ipynb
 
     Parameters of XGBoost: 
                            base_score=0.3, boost_params='gbtree', booster=None,
@@ -53,7 +55,8 @@ CT_XGB_RF_ET_Final_Model 1.ipynb
 
 ## Model 2
 Model 1 uses global arc and orogenic magmatic whole rock geochemistry data barring Gangdese with XGboost algorithm to build model to calculate the crust thickness (CT).
- CT_XGB_RF_ET_Final_Model  2.ipynb
+
+    CT_XGB_RF_ET_Final_Model  2.ipynb
 
     Parameters of XGBoost:
                            base_score=0.3, boost_params='gbtree', booster=None,
@@ -70,11 +73,22 @@ Model 1 uses global arc and orogenic magmatic whole rock geochemistry data barri
 
 # Data Predictions
 This part is used to introduce how to apply our models. If you just  want to use our model, you can run the next two files.
+Make sure your dataset has "SiO2 TiO2 Al2O3 FeOt CaO MgO MnO K2O Na2O P2O5 Cr Ni Rb Sr Y Zr Nb Ba La Ce Pr Nd Sm Eu Gd Tb Dy Er Yb Lu Hf Th Ln(La/Yb(n)) Sr/Y" those elements to use our model.
+XGBoost Regression tolerates the null value. If dataset does not contain part of elements, just make it empty!
 ## Model 1
-XGBoost model1_ application.ipynb 
 
+    XGBoost model1_ application.ipynb 
+
+First input the datasets. Then drop other columns and run the cells.
+Rename the output files. 
+The calculated crust thickness will add to the last column.
 ## Model 2 
-XGBoost model2_ application.ipynb 
+
+    XGBoost model2_ application.ipynb 
+
+First input the datasets. Then drop other columns and run the cells.
+Rename the output files. 
+The calculated crust thickness will add to the last column.
 
 
 Please run the CT_XGB_RF_ET_Final_Model 1.ipynb, CT_XGB_RF_ET_Final_Model 2.ipynb, XGBoost model1.0_ application.ipynb, XGBoost model2.0_ application.ipynb in turn. You can change the filenames and parameters as you need. 
